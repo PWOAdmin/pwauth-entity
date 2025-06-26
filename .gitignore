@@ -1,4 +1,4 @@
-obj/
-lib/
-obj/**
-lib/**
+/obj/
+/lib/
+/alire/
+/config/
