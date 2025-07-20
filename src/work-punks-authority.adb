@@ -22,6 +22,18 @@ package body work.punks.Authority is
    return To_String (User_Ptr.User_Name);
    end Get_User_Name;
 
+   procedure Set_Enabled(User_Ptr: in out User_Access; Enabled: Boolean)
+   is
+   begin
+   User_Ptr.User_Enabled:=Enabled;
+   End Set_Enabled;
+
+   function Is_Enabled (User_Ptr: User_Access) return Boolean
+   is
+   begin
+return User_Ptr.User_Enabled;
+   end Is_Enabled;
+
 procedure Free is
      new Ada.Unchecked_Deallocation(User_Type, User_Ptr);
 
